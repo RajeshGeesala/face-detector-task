@@ -1,6 +1,6 @@
 import React from "react";
 
-const Webcam = ({ videoRef }) => {
+const WebCam = ({ videoRef }) => {
   return (
     <div style={{ marginTop: "20px" }}>
       {/* Webcam preview */}
@@ -9,4 +9,4 @@ const Webcam = ({ videoRef }) => {
   );
 };
 
-export default Webcam;
+export default WebCam;

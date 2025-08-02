@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { loadModels, startVideo, captureImage, getFaceDescriptor, compareFaces } from "../../utils/faceUtils";
 import ProgressSteps from "./ProgressSteps";
-import Webcam from "./Webcam";
 import CaptureButton from "./CaptureButton";
 import ResultMessage from "./ResultMessage";
-
+import WebCam from './WebCam'
 const FaceVerification = () => {
   const videoRef = useRef(null); // Webcam reference
   const [step, setStep] = useState("face"); // Steps: face → document → result
@@ -58,7 +57,7 @@ const FaceVerification = () => {
       <ProgressSteps step={step} faceImage={faceImage} docImage={docImage} result={result} />
 
       {/* Webcam view */}
-      <Webcam videoRef={videoRef} />
+      <WebCam videoRef={videoRef} />
 
       {/* Capture button */}
       {step !== "result" && <CaptureButton step={step} onCapture={handleCapture} />}

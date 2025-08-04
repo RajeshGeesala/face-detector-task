@@ -1,9 +1,7 @@
-import React from "react";
-
 const ResultMessage = ({ result }) => {
   if (!result) return null;
   return (
-    <p style={{ marginTop: "15px", fontWeight: "bold", color: result.includes("✅") ? "green" : "red" }}>
+    <p style={{ color: result.includes("✅") ? "green" : "red", fontWeight: "bold", marginTop: 20 }}>
       {result}
     </p>
   );
